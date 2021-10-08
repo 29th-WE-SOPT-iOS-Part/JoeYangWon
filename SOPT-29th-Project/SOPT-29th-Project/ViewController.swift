@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        nameTextField.text = UserDefaults.standard.string(forKey: "nameText")
+        
         passwordTextField.isSecureTextEntry = true
 
     }
@@ -25,6 +27,9 @@ class ViewController: UIViewController {
     
     // Push. Navigation을 통해 SecondVC로 이동
     @IBAction func accountBtn(_ sender: Any) {
+        
+        UserDefaults.standard.set(nameTextField.text, forKey: "nameText")
+        
         
         guard let nextVC = self.storyboard?.instantiateViewController(identifier: "SecondViewController") else {return}
         
@@ -45,6 +50,9 @@ class ViewController: UIViewController {
         nextVC.modalPresentationStyle = .fullScreen
         self.present(nextVC, animated: true, completion: nil)
     }
+    
+    
+    
     
     
     @IBAction func checkBoxTapped(_ sender: UIButton) {
