@@ -13,9 +13,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var phoneNumTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    @IBOutlet weak var nextBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+        nextBtn.isEnabled = false
+        nextBtn.backgroundColor = .systemGray
+
+        nameTextField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
+        phoneNumTextField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
+        
+        
         
         nameTextField.text = UserDefaults.standard.string(forKey: "nameText")
         
@@ -24,6 +36,20 @@ class ViewController: UIViewController {
     }
     
   
+    
+    @objc func textFieldDidChange(textField: UITextField) {
+        
+        if nameTextField.text?.isEmpty == true || phoneNumTextField.text?.isEmpty == true || passwordTextField.text?.isEmpty == true {
+            nextBtn.isEnabled = false
+            nextBtn.backgroundColor = .systemGray
+            
+        } else {
+            nextBtn.isEnabled = true
+            nextBtn.backgroundColor = .systemBlue
+        }
+    }
+    
+    
     
     // Push. Navigation을 통해 SecondVC로 이동
     @IBAction func accountBtn(_ sender: Any) {

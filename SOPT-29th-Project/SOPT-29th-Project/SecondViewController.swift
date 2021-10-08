@@ -8,41 +8,43 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-
+    
     @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var phoneNumTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    var nameText: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setNameText()
-        
-        nameTextField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
+        nextBtn.isEnabled = false
+        nextBtn.backgroundColor = .systemGray
 
+        nameTextField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
+        phoneNumTextField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
+
+        
+        setNameText()
         
         passwordTextField.isSecureTextEntry = true
         
     }
- 
+    
     
     func setNameText() {
         if let nameTxt = UserDefaults.standard.string(forKey: "nameText") {
             nameTextField.text = nameTxt
         }
     }
- 
-
     
     
+    
+    // 도전과제 1. 값변경이 되었을 때 적용할 함수
     @objc func textFieldDidChange(textField: UITextField) {
-
-        if nameTextField.text?.isEmpty == true, phoneNumTextField.text?.isEmpty == true, passwordTextField.text?.isEmpty == true {
-            
-            //            nextBtn.isEnabled = false
+        
+        if nameTextField.text?.isEmpty == true || phoneNumTextField.text?.isEmpty == true || passwordTextField.text?.isEmpty == true {
             nextBtn.isEnabled = false
             nextBtn.backgroundColor = .systemGray
             
@@ -51,26 +53,13 @@ class SecondViewController: UIViewController {
             nextBtn.backgroundColor = .systemBlue
         }
     }
-
+    
     
     
     
     @IBAction func nextBtn(_ sender: Any) {
         
-        
-        if nameTextField.text?.isEmpty == true, phoneNumTextField.text?.isEmpty == true, passwordTextField.text?.isEmpty == true {
-            
-            //            nextBtn.isEnabled = false
-            nextBtn.isEnabled = false
-            
-        } else {
-            nextBtn.isEnabled = true
-            
-        }
-       
-        
-        
-     guard let nextVC = self.storyboard?.instantiateViewController(identifier: "ThirdViewController") else {return}
+        guard let nextVC = self.storyboard?.instantiateViewController(identifier: "ThirdViewController") else {return}
         
         nextVC.modalPresentationStyle = .fullScreen
         self.present(nextVC, animated: true, completion: nil)
@@ -84,19 +73,10 @@ class SecondViewController: UIViewController {
         if sender.isSelected {
             sender.isSelected = false
             passwordTextField.isSecureTextEntry = true
-
+            
         } else {
             sender.isSelected = true
             passwordTextField.isSecureTextEntry = false
         }
     }
 }
-//
-//extension SecondViewController: UITextFieldDelegate {
-//
-//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool
-//    {
-//        return true
-//
-//    }
-//}
