@@ -14,9 +14,13 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var phoneNumTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    var nameText: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setNameText()
+        
         nameTextField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
 
         
@@ -24,6 +28,12 @@ class SecondViewController: UIViewController {
         
     }
  
+    
+    func setNameText() {
+        if let nameTxt = UserDefaults.standard.string(forKey: "nameText") {
+            nameTextField.text = nameTxt
+        }
+    }
  
 
     
