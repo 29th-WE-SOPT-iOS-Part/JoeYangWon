@@ -138,6 +138,7 @@
                     <navigationItem key="navigationItem" id="D9K-rw-3qF"/>
                     <connections>
                         <outlet property="nameTextField" destination="5at-AQ-nH8" id="NhX-Y9-KPz"/>
+                        <outlet property="nextBtn" destination="mkB-Na-E0u" id="DxG-oV-fti"/>
                         <outlet property="passwordTextField" destination="1O8-AW-7gE" id="szp-xn-qF3"/>
                         <outlet property="phoneNumTextField" destination="lBU-MG-gBq" id="FSK-cs-ut7"/>
                     </connections>
