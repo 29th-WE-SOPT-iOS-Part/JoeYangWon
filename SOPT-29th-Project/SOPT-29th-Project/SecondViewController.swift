@@ -33,6 +33,7 @@ class SecondViewController: UIViewController {
     }
     
     
+    // 도도전과제
     func setNameText() {
         if let nameTxt = UserDefaults.standard.string(forKey: "nameText") {
             nameTextField.text = nameTxt
@@ -44,7 +45,9 @@ class SecondViewController: UIViewController {
     // 도전과제 1. 값변경이 되었을 때 적용할 함수
     @objc func textFieldDidChange(textField: UITextField) {
         
-        if nameTextField.text?.isEmpty == true || phoneNumTextField.text?.isEmpty == true || passwordTextField.text?.isEmpty == true {
+        if nameTextField.text?.isEmpty == true ||
+            phoneNumTextField.text?.isEmpty == true ||
+            passwordTextField.text?.isEmpty == true {
             nextBtn.isEnabled = false
             nextBtn.backgroundColor = .systemGray
             
@@ -70,13 +73,26 @@ class SecondViewController: UIViewController {
     
     // 도전과제 2
     @IBAction func checkBoxTapped(_ sender: UIButton) {
+
+        
         if sender.isSelected {
-            sender.isSelected = false
-            passwordTextField.isSecureTextEntry = true
+            sender.isSelected.toggle()
+            passwordTextField.isSecureTextEntry.toggle()
             
         } else {
-            sender.isSelected = true
-            passwordTextField.isSecureTextEntry = false
+            sender.isSelected.toggle()
+            passwordTextField.isSecureTextEntry.toggle()
         }
     }
+    
+//    @IBAction func checkBoxTapped(_ sender: UIButton) {
+//        if sender.isSelected {
+//            sender.isSelected = false
+//            passwordTextField.isSecureTextEntry = true
+//
+//        } else {
+//            sender.isSelected = true
+//            passwordTextField.isSecureTextEntry = false
+//        }
+//    }
 }

@@ -18,28 +18,43 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-        nextBtn.isEnabled = false
-        nextBtn.backgroundColor = .systemGray
-
-        nameTextField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
-        phoneNumTextField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
-        passwordTextField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
-        
-        
-        
-        nameTextField.text = UserDefaults.standard.string(forKey: "nameText")
-        
-        passwordTextField.isSecureTextEntry = true
-
+        setupButton()
+        setupTextFieldAddTarget()
+        setupNameTextFieldUserDefaults()
+        setupPasswordTextField()
     }
     
   
+    func setupButton(){
+        nextBtn.isEnabled = false
+        nextBtn.backgroundColor = .systemGray
+    }
+    
+    func setupTextFieldAddTarget(){
+        nameTextField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
+        phoneNumTextField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
+    }
+    
+    func setupPasswordTextField(){
+        passwordTextField.isSecureTextEntry = true
+    }
+    
+
+    func setupNameTextFieldUserDefaults(){
+        nameTextField.text = UserDefaults.standard.string(forKey: "nameText")
+    }
+    
+    
+    
+    
+    
     
     @objc func textFieldDidChange(textField: UITextField) {
         
-        if nameTextField.text?.isEmpty == true || phoneNumTextField.text?.isEmpty == true || passwordTextField.text?.isEmpty == true {
+        if nameTextField.text?.isEmpty == true ||
+            phoneNumTextField.text?.isEmpty == true ||
+            passwordTextField.text?.isEmpty == true {
             nextBtn.isEnabled = false
             nextBtn.backgroundColor = .systemGray
             
@@ -53,12 +68,10 @@ class ViewController: UIViewController {
     
     // Push. Navigation을 통해 SecondVC로 이동
     @IBAction func accountBtn(_ sender: Any) {
-        
+        // 도도전과제
         UserDefaults.standard.set(nameTextField.text, forKey: "nameText")
         
-        
         guard let nextVC = self.storyboard?.instantiateViewController(identifier: "SecondViewController") else {return}
-        
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
     

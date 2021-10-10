@@ -64,7 +64,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ms-vJ-RYB">
-                                <rect key="frame" x="47" y="679" width="78" height="33"/>
+                                <rect key="frame" x="47" y="699" width="78" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="Tun-KO-WRe"/>
                                     <constraint firstAttribute="width" constant="78" id="f9S-kT-2Zt"/>
@@ -76,7 +76,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mkB-Na-E0u">
-                                <rect key="frame" x="289" y="679" width="78" height="33"/>
+                                <rect key="frame" x="289" y="699" width="78" height="33"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="78" id="joN-bj-LJS"/>
@@ -90,37 +90,32 @@
                                     <action selector="nextBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IXt-kA-vJu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vI-9e-NO6">
-                                <rect key="frame" x="47" y="639" width="24" height="24"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vI-9e-NO6">
+                                <rect key="frame" x="47" y="639" width="150" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="24" id="9SO-8d-Jcr"/>
-                                    <constraint firstAttribute="height" constant="24" id="opU-eq-SqX"/>
+                                    <constraint firstAttribute="width" constant="150" id="9SO-8d-Jcr"/>
+                                    <constraint firstAttribute="height" constant="50" id="opU-eq-SqX"/>
                                 </constraints>
-                                <state key="normal" image="btnCheckBoxBlank"/>
+                                <state key="normal" title="비밀번호 표시" image="btnCheckBoxBlank">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
                                 <state key="selected" image="btnCheckBox"/>
                                 <connections>
                                     <action selector="checkBoxTapped:" destination="8PE-QY-QLJ" eventType="touchUpInside" id="dRU-f4-NUw"/>
                                     <action selector="checkBoxTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j19-gt-6je"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호 표시" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wo1-IZ-ChA">
-                                <rect key="frame" x="86" y="640.5" width="93" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="zo4-ox-Zpm" firstAttribute="centerX" secondItem="SPE-zq-NRG" secondAttribute="centerX" id="3QH-eI-Lmo"/>
                             <constraint firstItem="1O8-AW-7gE" firstAttribute="centerX" secondItem="SPE-zq-NRG" secondAttribute="centerX" id="3U9-bR-wuv"/>
-                            <constraint firstItem="5Ms-vJ-RYB" firstAttribute="top" secondItem="1O8-AW-7gE" secondAttribute="bottom" constant="60" id="5M1-7f-xnW"/>
+                            <constraint firstItem="5Ms-vJ-RYB" firstAttribute="top" secondItem="1O8-AW-7gE" secondAttribute="bottom" constant="80" id="5M1-7f-xnW"/>
                             <constraint firstItem="5at-AQ-nH8" firstAttribute="centerX" secondItem="SPE-zq-NRG" secondAttribute="centerX" id="GCz-2g-NaQ"/>
                             <constraint firstItem="5at-AQ-nH8" firstAttribute="top" secondItem="5qe-pb-U0z" secondAttribute="bottom" constant="60" id="O8Z-4c-FOR"/>
                             <constraint firstItem="5qe-pb-U0z" firstAttribute="top" secondItem="zo4-ox-Zpm" secondAttribute="bottom" constant="35" id="P3X-Kc-8nk"/>
                             <constraint firstItem="mkB-Na-E0u" firstAttribute="trailing" secondItem="1O8-AW-7gE" secondAttribute="trailing" id="PTm-vg-4Me"/>
-                            <constraint firstItem="wo1-IZ-ChA" firstAttribute="leading" secondItem="6vI-9e-NO6" secondAttribute="trailing" constant="15" id="RSC-H3-uaa"/>
                             <constraint firstItem="SPE-zq-NRG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="RbD-CY-fTa"/>
                             <constraint firstItem="6vI-9e-NO6" firstAttribute="top" secondItem="1O8-AW-7gE" secondAttribute="bottom" constant="20" id="SFc-aj-Pyx"/>
                             <constraint firstItem="1O8-AW-7gE" firstAttribute="top" secondItem="lBU-MG-gBq" secondAttribute="bottom" constant="20" id="Vtg-lW-YEn"/>
@@ -128,11 +123,10 @@
                             <constraint firstItem="lBU-MG-gBq" firstAttribute="centerX" secondItem="SPE-zq-NRG" secondAttribute="centerX" id="fAm-rC-kPg"/>
                             <constraint firstItem="5Ms-vJ-RYB" firstAttribute="leading" secondItem="1O8-AW-7gE" secondAttribute="leading" id="kBG-O5-gjD"/>
                             <constraint firstItem="6vI-9e-NO6" firstAttribute="leading" secondItem="1O8-AW-7gE" secondAttribute="leading" id="ne1-Sb-cRd"/>
-                            <constraint firstItem="wo1-IZ-ChA" firstAttribute="centerY" secondItem="6vI-9e-NO6" secondAttribute="centerY" id="rcn-NN-2ji"/>
                             <constraint firstItem="zo4-ox-Zpm" firstAttribute="top" secondItem="SPE-zq-NRG" secondAttribute="bottom" constant="15" id="t7U-oP-l85"/>
                             <constraint firstItem="5qe-pb-U0z" firstAttribute="centerX" secondItem="SPE-zq-NRG" secondAttribute="centerX" id="tGq-Zl-5LT"/>
                             <constraint firstItem="SPE-zq-NRG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="yMZ-wP-5pT"/>
-                            <constraint firstItem="mkB-Na-E0u" firstAttribute="top" secondItem="1O8-AW-7gE" secondAttribute="bottom" constant="60" id="ztb-Ru-zVl"/>
+                            <constraint firstItem="mkB-Na-E0u" firstAttribute="top" secondItem="1O8-AW-7gE" secondAttribute="bottom" constant="80" id="ztb-Ru-zVl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="D9K-rw-3qF"/>
@@ -351,6 +345,9 @@
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
