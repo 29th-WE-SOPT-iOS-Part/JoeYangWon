@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SOPT_29th_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="SOPT_29th_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,8 +86,17 @@
                                 <state key="normal" title="다음">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" value="YES">
+                                        <string key="keyPath">layer.masksToBounds
+출처: https://kiljh.tisto</string>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="nextBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IXt-kA-vJu"/>
+                                    <action selector="nextBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6ac-9r-kFa"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vI-9e-NO6">
@@ -132,7 +141,7 @@
                     <navigationItem key="navigationItem" id="D9K-rw-3qF"/>
                     <connections>
                         <outlet property="nameTextField" destination="5at-AQ-nH8" id="NhX-Y9-KPz"/>
-                        <outlet property="nextBtn" destination="mkB-Na-E0u" id="DxG-oV-fti"/>
+                        <outlet property="nextVcBtn" destination="mkB-Na-E0u" id="sc1-jD-Pmh"/>
                         <outlet property="passwordTextField" destination="1O8-AW-7gE" id="szp-xn-qF3"/>
                         <outlet property="phoneNumTextField" destination="lBU-MG-gBq" id="FSK-cs-ut7"/>
                     </connections>
@@ -200,6 +209,12 @@
                                 <state key="normal" title="다음">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="nextBtn:" destination="8PE-QY-QLJ" eventType="touchUpInside" id="TqW-Su-u29"/>
                                 </connections>
@@ -293,8 +308,21 @@
                                 <state key="normal" title="확인">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="dismissBtn:" destination="pSw-UC-MJq" eventType="touchUpInside" id="ePz-ML-JyJ"/>
+                                    <action selector="okBtnTapped:" destination="pSw-UC-MJq" eventType="touchUpInside" id="ePz-ML-JyJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XMC-yr-hZ8">
+                                <rect key="frame" x="131.5" y="619" width="151" height="30"/>
+                                <state key="normal" title="다른 계정으로 로그인하기"/>
+                                <connections>
+                                    <action selector="anotherAcountBtn:" destination="pSw-UC-MJq" eventType="touchUpInside" id="IHf-C8-DBh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -309,6 +337,8 @@
                             <constraint firstItem="SOs-g9-mZO" firstAttribute="top" secondItem="Oo5-oj-Zsd" secondAttribute="bottom" constant="45" id="kuc-er-LZA"/>
                             <constraint firstItem="SOs-g9-mZO" firstAttribute="centerX" secondItem="Oo5-oj-Zsd" secondAttribute="centerX" id="qta-rT-4Qj"/>
                             <constraint firstItem="7Bc-qh-vEU" firstAttribute="top" secondItem="6Xj-pg-fO7" secondAttribute="bottom" constant="85" id="so5-Fw-G5I"/>
+                            <constraint firstItem="XMC-yr-hZ8" firstAttribute="top" secondItem="7Bc-qh-vEU" secondAttribute="bottom" constant="35" id="wIN-oS-ub8"/>
+                            <constraint firstItem="XMC-yr-hZ8" firstAttribute="centerX" secondItem="7Bc-qh-vEU" secondAttribute="centerX" id="xAx-cZ-MV2"/>
                         </constraints>
                     </view>
                     <connections>

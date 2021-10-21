@@ -11,7 +11,7 @@
         <!--홈-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" id="Y6W-OH-hqX" customClass="HomeVC" customModule="SOPT_29th_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,7 +29,7 @@
         <!--추가-->
         <scene sceneID="iPF-X5-xwE">
             <objects>
-                <viewController id="nox-Yd-cho" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddVC" id="nox-Yd-cho" customClass="AddVC" customModule="SOPT_29th_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SZ9-Yq-aQl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,14 +42,16 @@
             </objects>
             <point key="canvasLocation" x="2457" y="104"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tabbar Controller-->
         <scene sceneID="81l-9K-fRJ">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="2lL-RW-lMe" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabbarController" automaticallyAdjustsScrollViewInsets="NO" id="2lL-RW-lMe" customClass="TabbarController" customModule="SOPT_29th_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1tp-K0-HFP">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="labelColor"/>
+                        <color key="selectedImageTintColor" systemColor="labelColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="Y6W-OH-hqX" kind="relationship" relationship="viewControllers" id="BB4-wv-7DG"/>
@@ -66,7 +68,7 @@
         <!--Shorts-->
         <scene sceneID="pCU-rn-npa">
             <objects>
-                <viewController id="YWV-63-XhJ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ShortsVC" id="YWV-63-XhJ" customClass="ShortsVC" customModule="SOPT_29th_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sOS-Ib-cYR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,7 +84,7 @@
         <!--보관함-->
         <scene sceneID="e6W-To-syM">
             <objects>
-                <viewController id="Cd5-ZH-obx" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StroageVC" id="Cd5-ZH-obx" customClass="StorageVC" customModule="SOPT_29th_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iOW-Eh-ky2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,7 +100,7 @@
         <!--구독-->
         <scene sceneID="NoT-ZU-eBw">
             <objects>
-                <viewController id="DfX-Oy-Inv" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SubscribeVC" id="DfX-Oy-Inv" customClass="SubscribeVC" customModule="SOPT_29th_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cXw-qA-Zq0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -123,6 +125,9 @@
         <image name="shortsIconFill" width="32" height="32"/>
         <image name="subscriptionsIcon" width="32.5" height="32.5"/>
         <image name="subscriptionsIconFill" width="32" height="32"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

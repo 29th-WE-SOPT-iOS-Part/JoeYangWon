@@ -37,6 +37,7 @@ class SecondViewController: UIViewController {
     func setNameText() {
         if let nameTxt = UserDefaults.standard.string(forKey: "nameText") {
             nameTextField.text = nameTxt
+            print(UserDefaults.index(ofAccessibilityElement: 0))
         }
     }
     
