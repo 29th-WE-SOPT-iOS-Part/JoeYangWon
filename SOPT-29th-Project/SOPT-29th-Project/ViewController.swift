@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var phoneNumTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    @IBOutlet weak var nextBtn: UIButton!
+    @IBOutlet weak var nextVcBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,25 +23,27 @@ class ViewController: UIViewController {
         setupNameTextFieldUserDefaults()
         setupPasswordTextField()
     }
+
+    
     
   
-    func setupButton(){
-        nextBtn.isEnabled = false
-        nextBtn.backgroundColor = .systemGray
+    private func setupButton(){
+        nextVcBtn.isEnabled = false
+        nextVcBtn.backgroundColor = .systemGray
     }
     
-    func setupTextFieldAddTarget(){
+    private func setupTextFieldAddTarget(){
         nameTextField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
         phoneNumTextField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
         passwordTextField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
     }
     
-    func setupPasswordTextField(){
+    private func setupPasswordTextField(){
         passwordTextField.isSecureTextEntry = true
     }
     
 
-    func setupNameTextFieldUserDefaults(){
+    private func setupNameTextFieldUserDefaults(){
         nameTextField.text = UserDefaults.standard.string(forKey: "nameText")
     }
     
@@ -49,18 +51,18 @@ class ViewController: UIViewController {
     
     
     
-    
+    // hasText로 간결하게 바꿀 수 있다
     @objc func textFieldDidChange(textField: UITextField) {
         
         if nameTextField.text?.isEmpty == true ||
             phoneNumTextField.text?.isEmpty == true ||
             passwordTextField.text?.isEmpty == true {
-            nextBtn.isEnabled = false
-            nextBtn.backgroundColor = .systemGray
+            nextVcBtn.isEnabled = false
+            nextVcBtn.backgroundColor = .systemGray
             
         } else {
-            nextBtn.isEnabled = true
-            nextBtn.backgroundColor = .systemBlue
+            nextVcBtn.isEnabled = true
+            nextVcBtn.backgroundColor = .systemBlue
         }
     }
     
@@ -95,16 +97,8 @@ class ViewController: UIViewController {
     
     
     @IBAction func checkBoxTapped(_ sender: UIButton) {
-        if sender.isSelected {
-            sender.isSelected = false
-            passwordTextField.isSecureTextEntry = true
-
-        } else {
-            sender.isSelected = true
-            passwordTextField.isSecureTextEntry = false
-        }
-        
+        sender.isSelected.toggle()
+        passwordTextField.isSecureTextEntry.toggle()
     }
-    
 }
 

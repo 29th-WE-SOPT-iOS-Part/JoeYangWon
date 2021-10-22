@@ -15,6 +15,13 @@
 		52805EBE27084C8C00D670E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52805EBC27084C8C00D670E1 /* LaunchScreen.storyboard */; };
 		52D3BDFA270EE0E900FAE277 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D3BDF9270EE0E900FAE277 /* SecondViewController.swift */; };
 		52D3BDFC270EE10600FAE277 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D3BDFB270EE10600FAE277 /* ThirdViewController.swift */; };
+		52D3BE3F2721339B00FAE277 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52D3BE3E2721339B00FAE277 /* Tabbar.storyboard */; };
+		52D3BE4C272137FC00FAE277 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D3BE4B272137FC00FAE277 /* HomeVC.swift */; };
+		52D3BE4E2721381D00FAE277 /* ShortsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D3BE4D2721381D00FAE277 /* ShortsVC.swift */; };
+		52D3BE502721382E00FAE277 /* AddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D3BE4F2721382E00FAE277 /* AddVC.swift */; };
+		52D3BE522721385300FAE277 /* SubscribeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D3BE512721385300FAE277 /* SubscribeVC.swift */; };
+		52D3BE542721386E00FAE277 /* StorageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D3BE532721386E00FAE277 /* StorageVC.swift */; };
+		52D3BE56272146F100FAE277 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D3BE55272146F100FAE277 /* TabbarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +35,13 @@
 		52805EBF27084C8C00D670E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52D3BDF9270EE0E900FAE277 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		52D3BDFB270EE10600FAE277 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		52D3BE3E2721339B00FAE277 /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
+		52D3BE4B272137FC00FAE277 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		52D3BE4D2721381D00FAE277 /* ShortsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortsVC.swift; sourceTree = "<group>"; };
+		52D3BE4F2721382E00FAE277 /* AddVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVC.swift; sourceTree = "<group>"; };
+		52D3BE512721385300FAE277 /* SubscribeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeVC.swift; sourceTree = "<group>"; };
+		52D3BE532721386E00FAE277 /* StorageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageVC.swift; sourceTree = "<group>"; };
+		52D3BE55272146F100FAE277 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,8 +83,23 @@
 				52805EB527084C8900D670E1 /* ViewController.swift */,
 				52D3BDF9270EE0E900FAE277 /* SecondViewController.swift */,
 				52D3BDFB270EE10600FAE277 /* ThirdViewController.swift */,
+				52D3BE402721362600FAE277 /* TabberStoryBoard */,
 			);
 			path = "SOPT-29th-Project";
+			sourceTree = "<group>";
+		};
+		52D3BE402721362600FAE277 /* TabberStoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				52D3BE3E2721339B00FAE277 /* Tabbar.storyboard */,
+				52D3BE55272146F100FAE277 /* TabbarController.swift */,
+				52D3BE4B272137FC00FAE277 /* HomeVC.swift */,
+				52D3BE4D2721381D00FAE277 /* ShortsVC.swift */,
+				52D3BE4F2721382E00FAE277 /* AddVC.swift */,
+				52D3BE512721385300FAE277 /* SubscribeVC.swift */,
+				52D3BE532721386E00FAE277 /* StorageVC.swift */,
+			);
+			path = TabberStoryBoard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +159,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52D3BE3F2721339B00FAE277 /* Tabbar.storyboard in Resources */,
 				52805EBE27084C8C00D670E1 /* LaunchScreen.storyboard in Resources */,
 				52805EBB27084C8C00D670E1 /* Assets.xcassets in Resources */,
 				52805EB927084C8900D670E1 /* Main.storyboard in Resources */,
@@ -143,11 +173,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52D3BE542721386E00FAE277 /* StorageVC.swift in Sources */,
+				52D3BE502721382E00FAE277 /* AddVC.swift in Sources */,
 				52D3BDFA270EE0E900FAE277 /* SecondViewController.swift in Sources */,
 				52805EB627084C8900D670E1 /* ViewController.swift in Sources */,
 				52D3BDFC270EE10600FAE277 /* ThirdViewController.swift in Sources */,
+				52D3BE4C272137FC00FAE277 /* HomeVC.swift in Sources */,
 				52805EB227084C8900D670E1 /* AppDelegate.swift in Sources */,
+				52D3BE56272146F100FAE277 /* TabbarController.swift in Sources */,
 				52805EB427084C8900D670E1 /* SceneDelegate.swift in Sources */,
+				52D3BE4E2721381D00FAE277 /* ShortsVC.swift in Sources */,
+				52D3BE522721385300FAE277 /* SubscribeVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
