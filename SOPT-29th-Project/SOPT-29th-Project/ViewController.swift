@@ -5,6 +5,17 @@
 //  Created by 조양원 on 2021/10/02.
 //
 
+/*
+금잔디 리뷰 후 처리할 일
+ - 다른 계정으로 로그인 시 생기는 이슈
+ - 버튼명 수정
+ - 뷰컨 이름 변경
+ - 레이아웃 정확하게 맞추기
+ - 금잔디에
+ 
+ */
+
+
 import UIKit
 
 class ViewController: UIViewController {
@@ -84,15 +95,11 @@ class ViewController: UIViewController {
     @IBAction func nextBtn(_ sender: Any) {
         
         guard let nextVC = self.storyboard?.instantiateViewController(identifier: "ThirdViewController") as? ThirdViewController else {return}
-        // as?를 통해 해당 뷰컨에 있는 것을 확인한다
         
         nextVC.nameText = nameTextField.text
-    
         nextVC.modalPresentationStyle = .fullScreen
         self.present(nextVC, animated: true, completion: nil)
     }
-    
-    
     
     
     

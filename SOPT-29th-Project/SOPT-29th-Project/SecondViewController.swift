@@ -37,7 +37,6 @@ class SecondViewController: UIViewController {
     func setNameText() {
         if let nameTxt = UserDefaults.standard.string(forKey: "nameText") {
             nameTextField.text = nameTxt
-            print(UserDefaults.index(ofAccessibilityElement: 0))
         }
     }
     
@@ -85,15 +84,4 @@ class SecondViewController: UIViewController {
             passwordTextField.isSecureTextEntry.toggle()
         }
     }
-    
-//    @IBAction func checkBoxTapped(_ sender: UIButton) {
-//        if sender.isSelected {
-//            sender.isSelected = false
-//            passwordTextField.isSecureTextEntry = true
-//
-//        } else {
-//            sender.isSelected = true
-//            passwordTextField.isSecureTextEntry = false
-//        }
-//    }
 }

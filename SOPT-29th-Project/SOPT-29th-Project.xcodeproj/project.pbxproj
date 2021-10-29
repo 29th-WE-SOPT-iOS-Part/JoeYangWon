@@ -13,6 +13,10 @@
 		52805EB927084C8900D670E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52805EB727084C8900D670E1 /* Main.storyboard */; };
 		52805EBB27084C8C00D670E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52805EBA27084C8C00D670E1 /* Assets.xcassets */; };
 		52805EBE27084C8C00D670E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52805EBC27084C8C00D670E1 /* LaunchScreen.storyboard */; };
+		5287598A272BCC8A0026DCE8 /* FeedTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52875988272BCC8A0026DCE8 /* FeedTVC.swift */; };
+		5287598B272BCC8A0026DCE8 /* FeedTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52875989272BCC8A0026DCE8 /* FeedTVC.xib */; };
+		5287598D272BCFA60026DCE8 /* AppContentDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287598C272BCFA60026DCE8 /* AppContentDataModel.swift */; };
+		5287598F272BDE750026DCE8 /* StoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287598E272BDE750026DCE8 /* StoryCollectionViewCell.swift */; };
 		52D3BDFA270EE0E900FAE277 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D3BDF9270EE0E900FAE277 /* SecondViewController.swift */; };
 		52D3BDFC270EE10600FAE277 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D3BDFB270EE10600FAE277 /* ThirdViewController.swift */; };
 		52D3BE3F2721339B00FAE277 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52D3BE3E2721339B00FAE277 /* Tabbar.storyboard */; };
@@ -33,6 +37,10 @@
 		52805EBA27084C8C00D670E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52805EBD27084C8C00D670E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52805EBF27084C8C00D670E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52875988272BCC8A0026DCE8 /* FeedTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTVC.swift; sourceTree = "<group>"; };
+		52875989272BCC8A0026DCE8 /* FeedTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTVC.xib; sourceTree = "<group>"; };
+		5287598C272BCFA60026DCE8 /* AppContentDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContentDataModel.swift; sourceTree = "<group>"; };
+		5287598E272BDE750026DCE8 /* StoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		52D3BDF9270EE0E900FAE277 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		52D3BDFB270EE10600FAE277 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		52D3BE3E2721339B00FAE277 /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
@@ -83,12 +91,12 @@
 				52805EB527084C8900D670E1 /* ViewController.swift */,
 				52D3BDF9270EE0E900FAE277 /* SecondViewController.swift */,
 				52D3BDFB270EE10600FAE277 /* ThirdViewController.swift */,
-				52D3BE402721362600FAE277 /* TabberStoryBoard */,
+				52D3BE402721362600FAE277 /* TabbarStoryBoard */,
 			);
 			path = "SOPT-29th-Project";
 			sourceTree = "<group>";
 		};
-		52D3BE402721362600FAE277 /* TabberStoryBoard */ = {
+		52D3BE402721362600FAE277 /* TabbarStoryBoard */ = {
 			isa = PBXGroup;
 			children = (
 				52D3BE3E2721339B00FAE277 /* Tabbar.storyboard */,
@@ -98,8 +106,12 @@
 				52D3BE4F2721382E00FAE277 /* AddVC.swift */,
 				52D3BE512721385300FAE277 /* SubscribeVC.swift */,
 				52D3BE532721386E00FAE277 /* StorageVC.swift */,
+				52875988272BCC8A0026DCE8 /* FeedTVC.swift */,
+				52875989272BCC8A0026DCE8 /* FeedTVC.xib */,
+				5287598C272BCFA60026DCE8 /* AppContentDataModel.swift */,
+				5287598E272BDE750026DCE8 /* StoryCollectionViewCell.swift */,
 			);
-			path = TabberStoryBoard;
+			path = TabbarStoryBoard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52D3BE3F2721339B00FAE277 /* Tabbar.storyboard in Resources */,
+				5287598B272BCC8A0026DCE8 /* FeedTVC.xib in Resources */,
 				52805EBE27084C8C00D670E1 /* LaunchScreen.storyboard in Resources */,
 				52805EBB27084C8C00D670E1 /* Assets.xcassets in Resources */,
 				52805EB927084C8900D670E1 /* Main.storyboard in Resources */,
@@ -178,11 +191,14 @@
 				52D3BDFA270EE0E900FAE277 /* SecondViewController.swift in Sources */,
 				52805EB627084C8900D670E1 /* ViewController.swift in Sources */,
 				52D3BDFC270EE10600FAE277 /* ThirdViewController.swift in Sources */,
+				5287598A272BCC8A0026DCE8 /* FeedTVC.swift in Sources */,
 				52D3BE4C272137FC00FAE277 /* HomeVC.swift in Sources */,
 				52805EB227084C8900D670E1 /* AppDelegate.swift in Sources */,
+				5287598D272BCFA60026DCE8 /* AppContentDataModel.swift in Sources */,
 				52D3BE56272146F100FAE277 /* TabbarController.swift in Sources */,
 				52805EB427084C8900D670E1 /* SceneDelegate.swift in Sources */,
 				52D3BE4E2721381D00FAE277 /* ShortsVC.swift in Sources */,
+				5287598F272BDE750026DCE8 /* StoryCollectionViewCell.swift in Sources */,
 				52D3BE522721385300FAE277 /* SubscribeVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

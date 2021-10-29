@@ -39,13 +39,11 @@ class ThirdViewController: UIViewController {
     
     
     @IBAction func anotherAcountBtn(_ sender: Any) {
-  
-        guard let nextVC = self.storyboard?.instantiateViewController(identifier: "ViewController") as? ViewController else {return}
-        nextVC.modalPresentationStyle = .fullScreen
-        self.present(nextVC, animated: false, completion: nil)
-            
+        guard let firstVC = presentingViewController as? UINavigationController else { return }
+        dismiss(animated: true) {
+            firstVC.popToRootViewController(animated: true)
+        }
     }
-    
 }
 
 
