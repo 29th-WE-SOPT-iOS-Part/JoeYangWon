@@ -1,0 +1,6 @@
+framework module Pods_SOPT_29th_Project {
+  umbrella header "Pods-SOPT-29th-Project-umbrella.h"
+
+  export *
+  module * { export * }
+}

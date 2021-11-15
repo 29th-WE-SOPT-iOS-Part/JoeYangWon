@@ -15,9 +15,21 @@ class StoryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var storyNameLabel: UILabel!
     
     func collectionViewSetData(storyImage: UIImage?, storyName: String) {
-        storyImageView.image = storyImage
+       
+        //storyImageView.image = storyImage
+        if storyImageView != nil {
+            storyImageView.image = storyImage
+        } else {
+            return
+        }
+        
         storyNameLabel.text = storyName
+    
+
+    
+        
+       
+        
+        
     }
 }
-
-

@@ -31,11 +31,11 @@ class FeedTVC: UITableViewCell {
     }
     
     
-    func setData(appData: AppContentData) {
-        describeLabel.text = appData.titleLabel
-        subDescribeLabel.text = appData.subTitleLabel
-        thumbnailImageView.image = appData.makeThumbnailImageImage()
-        profileImageView.image = appData.makeProfileImageImage()
+    func setData(appData: FeedContentData) {
+        describeLabel.text = appData.title
+        subDescribeLabel.text = appData.subTitle
+        thumbnailImageView.image = appData.makeThumbnailImage()
+        profileImageView.image = appData.makeProfileImage()
     }
     
 }

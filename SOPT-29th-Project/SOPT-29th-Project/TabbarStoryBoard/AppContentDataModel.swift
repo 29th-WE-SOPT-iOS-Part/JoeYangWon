@@ -15,25 +15,15 @@ struct AppContentData {
     let profileImage: String
     
     
-    func makeThumbnailImageImage() -> UIImage? {
+    func makeThumbnailImage() -> UIImage? {
         return UIImage(named: thumbnailImage)
     }
 
-    func makeProfileImageImage() -> UIImage? {
+    func makeProfileImage() -> UIImage? {
         return UIImage(named: profileImage)
     }
 }
 
 
-struct StoryContentData {
-    
-    let profileImage: String
-    let storyName: String
-    
-    func makeProfileImageImage() -> UIImage? {
-        return UIImage(named: profileImage)
-    }
-
-}
 
 
