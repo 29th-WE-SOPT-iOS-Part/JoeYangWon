@@ -39,7 +39,7 @@ class SecondViewController: UIViewController {
     
     // 도도전과제
     func setNameText() {
-        if let nameTxt = UserDefaults.standard.string(forKey: "nameText") {
+        if let nameTxt = UserDefaults.standard.string(forKey: "name") {
             nameTextField.text = nameTxt
         }
     }
@@ -116,11 +116,12 @@ extension SecondViewController {
             switch networkResult {
             case .success(let loginResponse):
                 guard let response = loginResponse as? SignUpResponseData else {return}
-                if let userData = response.data {
+                    if let userData = response.data {
                     self.showAlert(alertText: "회원가입",
                                    alertMessage: response.message,
                                    isSuccess: true
                     )
+                    UserDefaults.standard.set(userData.name, forKey: "name")
                 }
 
             case .requestErr(let msg):

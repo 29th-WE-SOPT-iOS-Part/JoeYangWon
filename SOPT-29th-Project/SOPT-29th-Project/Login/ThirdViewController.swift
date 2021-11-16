@@ -18,10 +18,6 @@ class ThirdViewController: UIViewController {
     }
     
     func setNameInLabel() {
-//        if let nameTxt = nameText {
-//            nameLabel.text = "\(nameTxt) 님!"
-//            
-//        }
         nameLabel.text = UserDefaults.standard.string(forKey: "name")
     }
 

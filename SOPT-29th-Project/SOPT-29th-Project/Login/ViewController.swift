@@ -5,15 +5,7 @@
 //  Created by 조양원 on 2021/10/02.
 //
 
-/*
- 금잔디 리뷰 후 처리할 일
- - 다른 계정으로 로그인 시 생기는 이슈
- - 버튼명 수정
- - 뷰컨 이름 변경
- - 레이아웃 정확하게 맞추기
- - 금잔디에
- 
- */
+
 
 
 import UIKit
@@ -28,7 +20,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupButton()
         setupTextFieldAddTarget()
         setupNameTextFieldUserDefaults()
@@ -54,35 +45,25 @@ class ViewController: UIViewController {
     
     
     private func setupNameTextFieldUserDefaults(){
-        nameTextField.text = UserDefaults.standard.string(forKey: "nameText")
+        nameTextField.text = UserDefaults.standard.string(forKey: "name")
     }
-    
-    
-    
     
     
     // hasText로 간결하게 바꿀 수 있다
     @objc func textFieldDidChange(textField: UITextField) {
-        
         if nameTextField.text?.isEmpty == true ||
             phoneNumTextField.text?.isEmpty == true ||
             passwordTextField.text?.isEmpty == true {
             nextVcBtn.isEnabled = false
             nextVcBtn.backgroundColor = .systemGray
-            
         } else {
             nextVcBtn.isEnabled = true
             nextVcBtn.backgroundColor = .systemBlue
         }
     }
     
-    
-    
     // Push. Navigation을 통해 SecondVC로 이동
     @IBAction func accountBtn(_ sender: Any) {
-        // 도도전과제
-//        UserDefaults.standard.set(nameTextField.text, forKey: "nameText")
-        
         guard let nextVC = self.storyboard?.instantiateViewController(identifier: "SecondViewController") as? SecondViewController else {return}
         self.navigationController?.pushViewController(nextVC, animated: true)
         print("---> \(nextVC)")

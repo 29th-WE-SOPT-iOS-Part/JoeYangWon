@@ -17,15 +17,12 @@ class HomeVC: UIViewController {
     var storyContentList: [StoryContentData] = []
     var filterContentList: [FilterContentData] = []
     var feedContentList: [FeedContentData] = []
-
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setData()
         setStoryCell()
         registerXib()
-        
     }
     
     func setStoryCell() {
@@ -112,24 +109,10 @@ class HomeVC: UIViewController {
     
     
     @IBAction func profileIconTapped(_ sender: Any) {
-        
-  
         let LoginStoryBoard = UIStoryboard.init(name: "Main", bundle: nil)
         guard let nextVC = LoginStoryBoard.instantiateViewController(withIdentifier: "NavigationController" ) as? UINavigationController else {return}
         nextVC.modalPresentationStyle = .fullScreen
         present(nextVC, animated: true, completion: nil)
-
-        
-        
-//        guard let homeVC = accountStoryboard.instantiateViewController(withIdentifier: "ViewController") as?
-//        ViewController else { return }
-//
-//        homeVC.modalPresentationStyle = .fullScreen
-//        self.present(homeVC, animated: true, completion: nil)
-    
-        
-//        guard let nextVC = accountStoryboard.instantiateViewController(withIdentifier: "ViewController") as? ViewController else {return}
-//        self.navigationController?.pushViewController(nextVC, animated: true)
     }
 }
 
