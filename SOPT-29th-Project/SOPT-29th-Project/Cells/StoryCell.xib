@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCell" id="gTV-IL-0wX" customClass="StoryCell" customModule="SOPT_29th_Project" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="72" height="104"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="72" height="104"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AS7-7s-QTa">
+                        <rect key="frame" x="0.0" y="0.0" width="72" height="104"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EXS-5R-7ar">
+                                <rect key="frame" x="0.0" y="0.0" width="72" height="104"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iPI-ZC-Net">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="iPI-ZC-Net" secondAttribute="height" multiplier="1:1" id="Otb-am-xvC"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uDs-of-Ugh">
+                                        <rect key="frame" x="0.0" y="72" width="72" height="32"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="EXS-5R-7ar" secondAttribute="trailing" id="1aK-2a-gM7"/>
+                            <constraint firstAttribute="bottom" secondItem="EXS-5R-7ar" secondAttribute="bottom" id="5H8-iK-Ogm"/>
+                            <constraint firstItem="EXS-5R-7ar" firstAttribute="top" secondItem="AS7-7s-QTa" secondAttribute="top" id="7Wf-66-ebK"/>
+                            <constraint firstItem="EXS-5R-7ar" firstAttribute="leading" secondItem="AS7-7s-QTa" secondAttribute="leading" id="eKe-sZ-VxB"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="AS7-7s-QTa" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="JQC-ei-Vdd"/>
+                <constraint firstAttribute="bottom" secondItem="AS7-7s-QTa" secondAttribute="bottom" id="PJR-Pp-XpV"/>
+                <constraint firstItem="AS7-7s-QTa" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="b63-1B-cgC"/>
+                <constraint firstAttribute="trailing" secondItem="AS7-7s-QTa" secondAttribute="trailing" id="cSL-ar-POG"/>
+            </constraints>
+            <connections>
+                <outlet property="imageView" destination="iPI-ZC-Net" id="CTi-9A-hla"/>
+                <outlet property="textLabel" destination="uDs-of-Ugh" id="TxR-kt-Rct"/>
+            </connections>
+            <point key="canvasLocation" x="140.57971014492756" y="121.875"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
